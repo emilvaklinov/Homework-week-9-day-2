@@ -1,0 +1,23 @@
+<p class="pageHeader">Manager</p>
+
+<table>
+
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>Budget</th>
+        <th>Department</th>
+
+    </tr>
+    #foreach($manager in $managers)
+    <tr>
+        <th>$manager.getFirstName()</th>
+        <th>$manager.getLastName()</th>
+        <th>$manager.getSalary()</th>
+        <th>$manager.getBudget()</th>
+        <th>$manager.getDepartment().getTitle()</th>
+
+    </tr>
+    #end
+</table>
