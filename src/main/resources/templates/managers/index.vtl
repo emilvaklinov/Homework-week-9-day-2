@@ -12,12 +12,31 @@
     </tr>
     #foreach($manager in $managers)
     <tr>
-        <th>$manager.getFirstName()</th>
-        <th>$manager.getLastName()</th>
-        <th>$manager.getSalary()</th>
-        <th>$manager.getBudget()</th>
-        <th>$manager.getDepartment().getTitle()</th>
+        <td>$manager.getFirstName()</td>
+        <td>$manager.getLastName()</td>
+        <td>$manager.getSalary().intValue()</td>
+        <td>$manager.getBudget().intValue()</td>
+        <td>$manager.getDepartment().getTitle()</td>
 
     </tr>
-    #end
+
 </table>
+
+<form action="/managers/$manager.getId()/edit" method="get">
+    <input type="submit" value="Update" class="button">
+</form>
+</td>
+<td>
+    <form action="/managers/$manager.getId()/delete" method="post">
+        <input type="submit" value="Delete" class="button">
+    </form>
+</td>
+
+</tr>
+#end
+
+</table>
+
+<form action="/managers/new" method="get">
+    <input type="submit" value="Create manager" class="button">
+</form>
