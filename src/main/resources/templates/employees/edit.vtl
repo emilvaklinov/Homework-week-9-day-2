@@ -1,0 +1,28 @@
+<form action="/employees/$employee.getId()" method="post">
+
+    <label for="firstName">First Name: </label>
+    <input type="text" name="firstName" id="firstName" required="true" value="$employee.getFirstName()">
+
+    <label for="lastName">Last Name: </label>
+    <input type="text" name="lastName" id="lastName" required="true" value="$employee.getLastName()">
+
+    <label for="salary">Salary: </label>
+    <input type="number" name="salary" id="salary" required="true" value="$employee.getSalary().intValue()" min="0" step="1">
+
+    <label for="departmentId">Department: </label>
+    <select name="departmentId" id="departmentId" required="true">
+
+        #foreach($department in $departments)
+
+        #if ($manager.getDepartment().getId() == $department.getId())
+        <option value="$department.getId()" selected>$department.getTitle()</option>
+
+        #else
+        <option value="$department.getId()">$department.getTitle()</option>
+        #end
+
+        #end
+    </select>
+
+    <input type="submit" value="Update" class="button"/>
+</form>

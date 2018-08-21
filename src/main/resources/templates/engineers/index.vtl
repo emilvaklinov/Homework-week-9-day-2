@@ -17,5 +17,15 @@
         <td>$engineer.getDepartment().getTitle()</td>
 
     </tr>
+    <form action="/engineers/$engineer.getId()/edit" method="get">
+        <input type="submit" value="Update" class="button">
+    </form>
+    </td>
+    <td>
+        <form action="/engineers/$engineer.getId()/delete" method="post">
+            <input type="submit" value="Delete" class="button">
+        </form>
+    </td>
+
     #end
 </table>
