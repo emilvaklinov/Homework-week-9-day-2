@@ -10,5 +10,6 @@ public class MainController {
         ManagersController managersController = new ManagersController();
         EmployeesController employeesController = new EmployeesController();
         EngineersController engineersController = new EngineersController();
+        DepartmentsController departmentsController = new DepartmentsController();
     }
 }

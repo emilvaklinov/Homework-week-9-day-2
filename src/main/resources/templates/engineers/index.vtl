@@ -1,4 +1,4 @@
-<p class="pageHeader">Manager</p>
+<p class="pageHeader">Engineer</p>
 
 <table>
     <tr>
@@ -11,10 +11,10 @@
 
     #foreach ($engineer in $engineers)
     <tr>
-        <th>$engineer.getFirstName()</th>
-        <th>$engineer.getLastName()</th>
-        <th>$engineer.getSalary()</th>
-        <th>$engineer.getDepartment().getTitle()</th>
+        <td>$engineer.getFirstName()</td>
+        <td>$engineer.getLastName()</td>
+        <td>$engineer.getSalary()</td>
+        <td>$engineer.getDepartment().getTitle()</td>
 
     </tr>
     #end

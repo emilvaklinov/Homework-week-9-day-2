@@ -1,0 +1,16 @@
+<p class="pageHeader">All Departments</p>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <!--<th>Employees</th>-->
+    </tr>
+    #foreach($department in $departments)
+
+    <tr>
+        <td>$department.getTitle()</td>
+        <!--<td>$department.getEmployees().getFirstName()</td>-->
+    </tr>
+    #end
+</table>
+
