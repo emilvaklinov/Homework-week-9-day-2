@@ -43,6 +43,8 @@ public class EmployeesController {
 
             Map<String, Object> model = new HashMap<>();
             model.put("template", "templates/employees/create.vtl");
+            List<Department> departments = DBHelper.getAll(Department.class);
+            model.put("departments", departments);
             return new ModelAndView(model, "templates/layout.vtl");
         }, new VelocityTemplateEngine());
 

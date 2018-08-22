@@ -1,4 +1,4 @@
-<p class="pageHeader">Create New Engineer</p>
+<p class="pageHeader">Create New Employee</p>
 
 <form action="/employees" method="post">
 
@@ -14,7 +14,7 @@
 
     <label for="department">Department:</label>
     <select class="dropdown" required="true" name="department" id="department">
-        #foreach ($department in $allDepartments)
+        #foreach ($department in $departments)
         <option value="$department.getId()">$department.getTitle()</option>
         #end
     </select>
