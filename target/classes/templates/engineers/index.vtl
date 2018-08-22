@@ -17,6 +17,8 @@
         <td>$engineer.getDepartment().getTitle()</td>
 
     </tr>
+
+</table>
     <form action="/engineers/$engineer.getId()/edit" method="get">
         <input type="submit" value="Update" class="button">
     </form>
@@ -29,3 +31,7 @@
 
     #end
 </table>
+
+<form action="/engineers/new" method="get">
+    <input type="submit" value="Add engineer" class="button">
+</form>

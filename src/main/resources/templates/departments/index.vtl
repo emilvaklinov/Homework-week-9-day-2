@@ -1,16 +1,32 @@
 <p class="pageHeader">All Departments</p>
 
 <table>
+
     <tr>
         <th>Title</th>
-        <!--<th>Employees</th>-->
     </tr>
-    #foreach($department in $departments)
 
+    #foreach($department in $departments)
     <tr>
         <td>$department.getTitle()</td>
-        <!--<td>$department.getEmployees().getFirstName()</td>-->
     </tr>
-    #end
+
 </table>
 
+<form action="/employees/$employee.getId()/edit" method="get">
+    <input type="submit" value="Update" class="button">
+</form>
+
+</td>
+<td>
+    <form action="/employees/$employee.getId()/delete" method="post">
+        <input type="submit" value="Delete" class="button">
+    </form>
+</td>
+#end
+
+</table>
+
+<form action="/departments/new" method="get">
+    <input type="submit" value="Create department" class="button">
+</form>
